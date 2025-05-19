@@ -1,0 +1,118 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografía y colores base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Encabezado */
+.encabezado {
+  background-color: #004080;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navegacion ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navegacion a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navegacion a:hover {
+  text-decoration: underline;
+}
+
+/* Secciones */
+.seccion {
+  padding: 60px 0;
+}
+
+.seccion h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #004080;
+}
+
+.seccion p {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Servicios */
+.servicios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.servicio {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 300px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Formulario de contacto */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.boton {
+  background-color: #004080;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: #003366;
+}
+
+/* Pie de página */
+.pie {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}

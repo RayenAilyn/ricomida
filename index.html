@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nombre del Proyecto</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor">
+      <h1 class="logo">Nombre del Proyecto</h1>
+      <nav class="navegacion">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="seccion">
+      <div class="contenedor">
+        <h2>Bienvenido a Nuestro Sitio</h2>
+        <p>Descripción breve de la empresa o proyecto.</p>
+        <a href="#servicios" class="boton">Conoce más</a>
+      </div>
+    </section>
+
+    <section id="servicios" class="seccion">
+      <div class="contenedor">
+        <h2>Servicios</h2>
+        <div class="servicios">
+          <article class="servicio">
+            <h3>Servicio 1</h3>
+            <p>Descripción del servicio 1.</p>
+          </article>
+          <article class="servicio">
+            <h3>Servicio 2</h3>
+            <p>Descripción del servicio 2.</p>
+          </article>
+          <article class="servicio">
+            <h3>Servicio 3</h3>
+            <p>Descripción del servicio 3.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="seccion">
+      <div class="contenedor">
+        <h2>Contacto</h2>
+        <form id="formulario-contacto">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+
+          <button type="submit" class="boton">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>&copy; 2025 Nombre del Proyecto. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
