@@ -2,16 +2,16 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ricomida - Pizza estilo Chicago</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/css/estilos.css"/>
 </head>
 <body>
 
   <!-- Header -->
   <header class="bg-dark text-white d-flex justify-content-between align-items-center px-4 py-2">
-    <h1 class="fs-3 m-0" style="font-family: 'Georgia', serif;">Ricomida</h1>
+    <h1 class="fs-3 m-0" style="font-family: 'Lobster', serif;">Ricomida</h1>
     <nav>
       <a href="#" class="text-white mx-2 text-decoration-none">Inicio</a>
       <a href="#" class="text-white mx-2 text-decoration-none">Recetas</a>
@@ -20,47 +20,73 @@
     </nav>
   </header>
 
-  <!-- Contenido principal -->
-  <main class="container py-5">
-    <div class="row">
-      <!-- Imagen principal -->
-      <div class="col-md-6 mb-4">
-        <img src="assets/img/principal.jpg" alt="Pizza estilo Chicago" class="img-fluid rounded shadow-sm" />
-      </div>
+  <!-- Envoltura para márgenes laterales -->
+  <div class="contenido-central">
 
-      <!-- Título y botones -->
-      <div class="col-md-6 d-flex flex-column justify-content-center">
-        <h2 class="fw-bold text-uppercase">Pizza al estilo Chicago con espinacas y champiñones</h2>
-        <hr />
-        <p class="fw-semibold">110 MIN / 6 A 8 PORCIONES</p>
-        <div class="d-flex flex-wrap gap-2">
-          <button class="btn btn-outline-secondary" id="btnCorreo" data-bs-toggle="tooltip" title="Presiona para enviar a tu correo">Enviar por correo</button>
-          <button class="btn btn-outline-secondary">Añadir a favoritos</button>
-          <button class="btn btn-dark">Agrega esta receta a tus favoritos</button>
+    <!-- Contenido principal -->
+    <main class="container py-5">
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <img src="assets/img/principal.jpg" alt="Pizza estilo Chicago" class="img-fluid rounded shadow-sm" />
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+          <h2 class="fw-bold text-uppercase">Pizza al estilo Chicago con espinacas y champiñones</h2>
+          <hr />
+          <p class="fw-semibold">110 MIN / 6 A 8 PORCIONES</p>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-outline-secondary" id="enviarCorreo" data-bs-toggle="tooltip" title="Presiona para enviar a tu correo">Enviar por correo</button>
+            <button class="btn btn-outline-secondary">Añadir a favoritos</button>
+            <button class="btn btn-dark">Agrega esta receta a tus favoritos</button>
+          </div>
         </div>
       </div>
+
+
+      
+    <!-- Carrusel de Galería de Ingredientes -->
+    <div id="ingredientesCarousel" class="carousel slide mt-5" data-bs-ride="false">
+    <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="container d-flex justify-content-center gap-3 flex-wrap">
+        <img src="assets/img/slider-1.png" class="galeria-img" alt="Ingrediente 1" />
+        <img src="assets/img/slider-2.png" class="galeria-img" alt="Ingrediente 2" />
+        <img src="assets/img/slider-3.png" class="galeria-img" alt="Ingrediente 3" />
+        <img src="assets/img/slider-4.png" class="galeria-img" alt="Ingrediente 4" />
+      </div>
     </div>
 
-    <!-- Galería -->
-    <div class="row text-center mt-5 g-3">
-      <div class="col-6 col-md-3"><img src="assets/img/slider-1.png" class="img-fluid rounded shadow-sm" alt="Ingrediente 1" /></div>
-      <div class="col-6 col-md-3"><img src="assets/img/slider-2.png" class="img-fluid rounded shadow-sm" alt="Ingrediente 2" /></div>
-      <div class="col-6 col-md-3"><img src="assets/img/slider-3.png" class="img-fluid rounded shadow-sm" alt="Ingrediente 3" /></div>
-      <div class="col-6 col-md-3"><img src="assets/img/slider-4.png" class="img-fluid rounded shadow-sm" alt="Ingrediente 4" /></div>
-      <div class="col-6 col-md-3"><img src="assets/img/slider-5.png" class="img-fluid rounded shadow-sm" alt="Ingrediente 5" /></div>
-      <div class="col-6 col-md-3"><img src="assets/img/slider-6.png" class="img-fluid rounded shadow-sm" alt="Ingrediente 6" /></div>
-      <div class="col-6 col-md-3"><img src="assets/img/slider-7.png" class="img-fluid rounded shadow-sm" alt="Ingrediente 7" /></div>
-      <div class="col-6 col-md-3"><img src="assets/img/slider-8.png" class="img-fluid rounded shadow-sm" alt="Ingrediente 8" /></div>
-
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="container d-flex justify-content-center gap-3 flex-wrap">
+        <img src="assets/img/slider-5.png" class="galeria-img" alt="Ingrediente 5" />
+        <img src="assets/img/slider-6.png" class="galeria-img" alt="Ingrediente 6" />
+        <img src="assets/img/slider-7.png" class="galeria-img" alt="Ingrediente 7" />
+        <img src="assets/img/slider-8.png" class="galeria-img" alt="Ingrediente 8" />
+      </div>
     </div>
 
-  </main>
+  </div>
 
-  <!-- Ingredientes y preparación -->
-    <div class="ingredientes">
-      <div class="col-md-6">
-        <h5 class="fw-bold text-uppercase">Ingredientes</h5>
-        <p><strong>Masa</strong><br>
+  <!-- Controles -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#ingredientesCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#ingredientesCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+
+
+    <!-- Ingredientes y preparación -->
+    <section class="container mt-5 mb-5">
+      <div class="row">
+        <div class="col-md-6">
+          <h5 class="fw-bold text-uppercase">Ingredientes</h5>
+      <p><strong>Masa</strong><br>
         20 gr de levadura seca instantánea<br>
         1 cucharadita de azúcar<br>
         500 ml agua tibia<br>
@@ -70,33 +96,94 @@
         2 cucharaditas de sal<br>
         625 gr harina</p>
 
-        <p><strong>Salsa</strong><br>
+      <p><strong>Salsa</strong><br>
         5 cucharadas de aceite de oliva<br>
         ½ cebolla picada en cubos finos<br>
         2 cucharaditas de sal<br>
         3 cucharadas de Orégano Gourmet<br>
         1 ½ cucharadas de Albahaca Gourmet<br>
-        2 tarro de tomates en cubos al natural<br>
+        2 tarros de tomates en cubos al natural<br>
         2 cucharaditas de azúcar</p>
 
-        <p><strong>Relleno</strong><br>
+      <p><strong>Relleno</strong><br>
         ½ cebolla, en cubos</p>
-      </div>
-      <div class="col-md-6">
-        <h5 class="fw-bold text-uppercase">Preparación</h5>
-        <p><strong>1.</strong> Para la masa, disolver la levadura y el azúcar en agua tibia en un bol grande. Dejar reposar 2 minutos. Agregar el aceite, la harina de maíz, sal y 400 gr de harina. Mezclar bien. Amasar y agregar el resto de harina, la cantidad necesaria para tener una masa blanda. Poner en el mesón y amasar por 5 minutos o hasta tener una masa lisa y elástica. Poner la masa en un bol aceitado, tapar con un paño limpio y dejar reposar hasta que la masa duplique su volumen. Golpear la masa para que baje y dejar leudar por 40 minutos adicionales.</p>
-        <p><strong>2.</strong> Mientras tanto preparar la salsa: Calentar 4 cucharadas de aceite en una olla a fuego medio. Agregar la cebolla, Orégano Gourmet, Albahaca Gourmet, sal y cocinar hasta que la cebolla esté dorada. Agregar el ajo y cocinar por 30 segundos. Agregar los tomates junto al jugo del tarro, a la mezcla de cebolla. Agregar el azúcar y cocinar hasta que la mezcla se haya reducido y espesado, como 30 minutos. Sazonar con sal y pimienta a gusto. Reservar.</p>
-        <p><strong>3.</strong> Relleno: Cocinar las chalotas en el aceite de oliva hasta que estén transparentes. Agregar los champiñones y las espinacas, cocinar hasta que estén cocidos y se haya evaporado todo el líquido que hayan votado los vegetales. Reservar.</p>
-        <p><strong>4.</strong> Calentar el horno a 220C.</p>
-        <p><strong>5.</strong> Una vez que la masa haya reposado, dividirla en dos bolas. Estirar cada masa para cubrir dos moldes (desmontables) de 26 cm, hacer un borde de 5 cm con la masa. Dividir el relleno entre las dos pizza, tapar con el queso mozarella, luego terminar con la salsa de tomates y finalmente espolvorear el queso rallado. </p>
-        <p><strong>6.</strong> Hornear por 35 a 40 minutos o hasta que el relleno esté caliente y la base esté esponjosa y dorada. Esperar unos minutos antes de desmoldar.</p>
+    </div>
 
+    <!-- Preparación -->
+    </div>
+        <div class="col-md-6">
+          <h5 class="fw-bold text-uppercase">Preparación</h5>
+      <p><strong>1.</strong> Para la masa, disolver la levadura y el azúcar en agua tibia en un bol grande. Dejar reposar 2 minutos. Agregar el aceite, la harina de maíz, sal y 400gr de harina. Mezclar bien. Amasar y agregar el resto de harina, la cantidad necesaria para tener una masa blanda. Poner en el mesón y amasar por 5 minutos o hasta tener una masa lisa y elástica (agregar harina en el mesón a medida que se va amasando para que la masa no se pegue) . Poner la masa en un bol aceitado, tapar con un paño de cocina limpio y dejar reposar hasta que la masa duplique su volumen (leudar). Golpear la masa para que baje y luego dejar leudar por 40 minutos adicionales. </p>
+      <p><strong>2.</strong> Mientras tanto preparar la salsa: Calentar 4 cucharadas de aceite en una olla a fuego medio. Agregar la cebolla, Orégano Gourmet, Albahaca Gourmet, sal y cocinar hasta que la cebolla esté dorada. Agregar el ajo y cocinar por 30 segundos. Agregar los tomates junto al jugo del tarro, a la mezcla de cebolla. Agregar el azúcar y cocinar hasta que la mezcla se haya reducido y espesado, como 30 minutos. Sazonar con sal y pimienta a gusto. Reservar. </p>
+      <p><strong>3.</strong> Relleno: Cocinar las chalotas en el aceite de oliva hasta que estén transparentes. Agregar los champiñones y las espinacas, cocinar hasta que estén cocidos y se haya evaporado todo el líquido que hayan votado los vegetales. Reservar. </p>
+      <p><strong>4.</strong> Calentar el horno a 220°C.</p>
+      <p><strong>5.</strong> Una vez que la masa haya reposado, dividirla en dos bolas. Estirar cada masa para cubrir dos moldes (desmontables) de 26 cm, hacer un borde de 5 cm con la masa. Dividir el relleno entre las dos pizza, tapar con el queso mozarella, luego terminar con la salsa de tomates y finalmente espolvorear el queso rallado.</p>
+      <p><strong>6.</strong> Hornear por 35 a 40 minutos o hasta que el relleno esté caliente y la base esté esponjosa y dorada. Esperar unos minutos antes de desmoldar.</p>
+        </div>
+      </div>
+    </section>
+
+
+  <div class="container my-5">
+    <hr>
+    <h2 class="text-center fw-bold mb-4">RECETAS RELACIONADAS</h2>
+    <div class="row text-center">
+
+    <div class="row text-center">
+      <!-- Panqueques -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="assets/img/recipe-card-1.png" class="card-img-top" alt="Panqueques con manjar y crema">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase fw-bold">PANQUEQUES CON MANJAR Y CREMA</h5>
+            <p class="card-text">Mus enim elementum dignissim class eleifend justo. Ut nunc magnis est vulputate nostra, blandit erat luctus.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tiramisu -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="assets/img/recipe-card-2.png" class="card-img-top" alt="Tiramisú">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase fw-bold">TIRAMISÚ</h5>
+            <p class="card-text">Congue fermentum dignissim rhoncus elementum ac nisi, proin phasellus lacinia sed faucibus mauris, taciti scelerisque nulla ornare consequat.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plateada -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="assets/img/recipe-card-3.png" class="card-img-top" alt="Plateada">
+          <div class="card-body">
+            <h5 class="card-title text-uppercase fw-bold">PLATEADA</h5>
+            <p class="card-text">Cubilia elementum posuere arcu rhoncus egestas lectus, diam aliquam laoreet ac eleifend risus, urna auctor inceptos mattis dapibus.</p>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
+  </div> <!-- Cierre de .contenido-central -->
+
+  <!-- Newsletter -->
+  <section class="newsletter-wrapper">
+    <div class="newsletter text-center text-white py-5">
+      <h3 class="fw-bold">SUSCRÍBETE EN NUESTRO NEWSLETTER</h3>
+      <p>y obtén las mejores recetas que tenemos en <em><strong>Ricomida</strong></em></p>
+      <button class="btn btn-outline-light mt-3" id="startBtn">Empezar</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="footer-wrapper">
+    <footer class="footer text-center py-4">
+      <p class="m-0"><strong><em>Ricomida</em></strong></p>
+    </footer>
+  </section>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
-</html>

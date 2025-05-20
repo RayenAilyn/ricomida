@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Cabin;
   background-color: #fff;
   color: #212529;
 }
@@ -19,6 +23,107 @@ button {
 }
 
 .ingredientes {
-  padding-left: 150px;
-  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.card-title {
+  font-size: 1rem;
+}
+
+.newsletter {
+  background-color: #c43a3a;
+}
+
+#startBtn {
+  border: 1px solid #ffffff;
+}
+
+.footer {
+  background-color: #333333;
+  color: white;
+  font-family: Lobster;
+  font-size: 1.25rem;
+}
+
+/* Carrusel personalizado para galería de ingredientes */
+#ingredientesCarousel .carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ingredientesCarousel .galeria-img {
+  width: 23.6%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 980px) {
+  #ingredientesCarousel .galeria-img {
+    width: 45%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Newsletter y Footer a pantalla completa */
+.newsletter-wrapper,
+.footer-wrapper {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.newsletter,
+.footer {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Márgenes laterales al contenido principal */
+.contenido-central {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+@media (max-width: 768px) {
+  .contenido-central {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  /* Ocultar carrusel en sm y xs */
+@media (max-width: 768px) {
+  #ingredientesCarousel {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  body::after {
+    content: "Vista móvil activa";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: red;
+    color: white;
+    padding: 0.5rem;
+    z-index: 9999;
+  }
+
+  #ingredientesCarousel {
+    display: none !important;
+  }
 }
